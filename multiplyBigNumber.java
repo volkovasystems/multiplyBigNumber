@@ -1,14 +1,22 @@
+package multiplyBigNumber;
+
 import java.math.BigInteger;
+
 public class multiplyBigNumber{
 	public static void main( String... numbers ){
 		try{
-			BigInteger number = new BigInteger( numbers[ 0 ] );
-			for( int index = 1; index < numbers.length; index++ ){
-				number = number.multiply( new BigInteger( numbers[ index ] ) );	
-			}
+			BigInteger product = multiplyBigNumber( numbers );
 			System.out.print( number.toString( ) );
 		}catch( Exception exception ){
 			System.err.print( exception.getMessage( ) );
 		}
+	}
+
+	public static final BigInteger multiplyBigNumber( String... numbers ){
+		BigInteger product = new BigInteger( numbers[ 0 ] );
+		for( int index = 1; index < numbers.length; index++ ){
+			product = product.multiply( new BigInteger( numbers[ index ] ) );	
+		}
+		return product;
 	}
 }
