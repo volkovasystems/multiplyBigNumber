@@ -3,10 +3,10 @@ package multiplyBigNumber;
 import java.math.BigInteger;
 
 public class multiplyBigNumber{
-	public static void main( String... numbers ){
+	public static void main( String... parameters ){
 		try{
 			BigInteger product = multiplyBigNumber( numbers );
-			System.out.print( number.toString( ) );
+			System.out.print( product.toString( ) );
 		}catch( Exception exception ){
 			System.err.print( exception.getMessage( ) );
 		}
